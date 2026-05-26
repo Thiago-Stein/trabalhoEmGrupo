@@ -1,0 +1,41 @@
+#containerPlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #c2d2f1;
+}
+
+#playstation5 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#tituloPlay {
+    font-size: 24px;
+    font-weight: bold;
+    color: #02276d;
+    margin-bottom: 10px;
+}
+
+.descricaoPlay {
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#precoPlay {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0950ac;
+    margin-top: 20px;
+}
