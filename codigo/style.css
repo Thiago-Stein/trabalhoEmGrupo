@@ -2,13 +2,19 @@
 #tituloLoja{
     font-size: 36px;
     font-weight: bold;
-    color: #696969;
+    color: #5b76cc;
     text-align: center;
     margin-top: 20px;
 }
 
 body{
-    background-color: #c7c7c7;
+    background-color: #131024;
+}
+
+.containerConsoles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 /* Estilização PlayStation 5: Ana Beatriz Esteves da Silva */
@@ -24,6 +30,7 @@ body{
     max-width: 400px;
     margin: 50px auto;
     background-color: #c2d2f1;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #playstation5 {
@@ -95,6 +102,7 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     margin: 50px auto;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #nintendoImage {
@@ -123,4 +131,57 @@ body{
     font-weight: bold;
     color: #03aa03;
     margin-top: 20px;
+}
+
+/* --- Responsividade  --- */
+@media (max-width: 768px) {
+    .containerConsoles {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    #containerPlay, #XboxX, #containerSwitch {
+        margin: 20px auto; 
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+
+    #tituloLoja {
+        font-size: 28px;
+    }
+}
+
+/* Adiciona efeitos à pagina    */
+
+/* ---  Animação do PlayStation  --- */
+@keyframes pulsoPlay {
+    0% { box-shadow: 0 0 10px #0950ac33; border: 2px solid transparent; }
+    50% { box-shadow: 0 0 50px rgba(23, 143, 255, 0.8); border: 2px solid rgba(9, 80, 172, 1); } 
+    100% { box-shadow: 0 0 10px rgba(9, 80, 172, 0.2); border: 2px solid transparent; }
+}
+
+/* ---  Animação do Xbox --- */
+@keyframes pulsoXbox {
+    0% { box-shadow: 0 0 10px rgba(11, 148, 6, 0.2); border: 2px solid transparent; }
+    50% { box-shadow: 0 0 50px rgba(20, 226, 12, 0.8); border: 2px solid rgba(11, 148, 6, 1); }
+    100% { box-shadow: 0 0 10px rgba(11, 148, 6, 0.2); border: 2px solid transparent; }
+}
+
+/* --- Animação do Nintendo Switch --- */
+@keyframes pulsoSwitch {
+    0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); border: 2px solid transparent; }
+    50% { box-shadow: 0 0 50px rgba(255, 0, 0, 0.8); border: 2px solid rgba(255, 0, 0, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); border: 2px solid transparent; }
+}
+
+#containerPlay {
+    animation: pulsoPlay 2.5s ease-in-out infinite;
+}
+
+#XboxX {
+    animation: pulsoXbox 2.5s ease-in-out infinite;
+}
+
+#containerSwitch {
+    animation: pulsoSwitch 2.5s ease-in-out infinite;
 }
